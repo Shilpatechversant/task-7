@@ -1,10 +1,10 @@
-    <cffunction  name="displayFunc" access="remote">
+    <cffunction  name="displayFunc" access="public" output="true">
         <cfargument  name="key" type="string" required="true">
         <cfargument  name="value" type="string" required="true">
         <cfapplication name="structures" sessionTimeout=#CreateTimeSpan(0, 0, 0, 60)# sessionManagement="Yes">
-        <cfset struct_name=structNew()>
-        <cfset struct_name.Key=key>
-        <cfset struct_name.Value=value>
+        <cfset local.struct_name=structNew()>
+        <cfset local.struct_name.Key=key>
+        <cfset local.struct_name.Value=value>
         <cfif NOT StructKeyExists(Session, "mystruct" )>
             <cflock timeout=20 scope="Session" type="Exclusive">
             <cfset Session.mystruct=structNew()>

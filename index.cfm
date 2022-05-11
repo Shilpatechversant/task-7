@@ -12,7 +12,7 @@
                 <form name="cftask_7" action="" method ="post">
                     <div class="form-group">
                     <label>Name</label>
-                    <input type="text" name="first_name" required placeholder="First Name" autocomplete="off">
+                    <input type="text" name="first_name" required  autocomplete="off">
                     </div>
                     <div class="form-group">
                     <label>Value</label>
